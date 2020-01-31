@@ -7,10 +7,21 @@
     <NuxtLink to="/profile">
       Profile page
     </NuxtLink>
+    <hr>
+    <h1>User Agent</h1>
+    <p>{{ userAgent }}</p>
+    <p>
+      <NuxtLink to="/posts">
+        Blog
+      </NuxtLink>
+    </p>
   </div>
 </template>
 <script>
 export default {
+  asyncData: ({ req }) => ({
+    userAgent: (req ? req.headers['user-agent'] : (typeof navigator !== 'undefined' ? navigator.userAgent : 'No user agent (generated)'))
+  }),
   head: {
     title: 'Home page 🚀',
     meta: [

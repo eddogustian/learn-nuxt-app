@@ -1,6 +1,6 @@
 <template>
   <div>
-    Ini isi dari halaman blog
+    
   </div>
 </template>
 

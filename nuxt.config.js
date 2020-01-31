@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+ build: {
+    vendor: ['axios']
+  },
   head: {
     title: 'example',
     meta: [
